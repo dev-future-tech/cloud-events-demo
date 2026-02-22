@@ -3,5 +3,5 @@
     "dockerComposeFile": "docker-compose.yml",
     "service" : "rabbitmq",
     "forwardPorts": [5672,15672],
-    "workspaceFolder": "."
+    "workspaceFolder": "/workspaces/cloud-events-demo"
 }
