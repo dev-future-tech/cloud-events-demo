@@ -4,6 +4,13 @@
     "service" : "rabbitmq",
     "forwardPorts": [5672,15672],
     "workspaceFolder": "/workspaces/cloud-events-demo",
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "25",
+            "installMaven": "true",
+            "installGradle": "false"
+        }
+    },
     "customizations": {
         "vscode": {
             "extensions": [
