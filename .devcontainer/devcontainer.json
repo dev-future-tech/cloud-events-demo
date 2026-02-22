@@ -1,7 +1,7 @@
 {
     "name" : "cloud-events-demo",
     "image" : "mcr.microsoft.com/devcontainers/java:latest",
-    "dockerComposeFile": "docker-compose.yml",
+    "dockerComposeFile": "../docker-compose.yml",
     "service" : "rabbitmq",
     "forwardPorts": [5672,15672],
     "workspaceFolder": "/workspaces/cloud-events-demo",
