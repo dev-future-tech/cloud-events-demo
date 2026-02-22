@@ -1,6 +1,6 @@
 {
     "name" : "cloud-events-demo",
-    "dockerComposeFile": ".devcontainer/docker-compose.yml",
+    "dockerComposeFile": "/workspaces/cloud-events-demo/docker-compose.yml",
     "service" : "rabbitmq",
     "forwardPorts": [5672,15672],
     "workspaceFolder": "/workspaces/cloud-events-demo"
