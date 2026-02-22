@@ -3,6 +3,5 @@
     "dockerComposeFile": "docker-compose.yml",
     "service" : "rabbitmq",
     "forwardPorts": [5672,15672],
-    "remoteUser": "codespace",
     "workspaceFolder": "."
 }
