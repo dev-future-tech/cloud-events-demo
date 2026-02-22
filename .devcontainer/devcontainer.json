@@ -1,7 +1,15 @@
 {
     "name" : "cloud-events-demo",
-    "dockerComposeFile": "/workspaces/cloud-events-demo/docker-compose.yml",
+    "dockerComposeFile": "docker-compose.yml",
     "service" : "rabbitmq",
     "forwardPorts": [5672,15672],
-    "workspaceFolder": "/workspaces/cloud-events-demo"
+    "workspaceFolder": "/workspaces/cloud-events-demo",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "praxai.mqexplorer"
+            ]
+        }
+    }
 }
