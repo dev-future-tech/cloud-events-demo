@@ -2,7 +2,7 @@
     "name" : "cloud-events-demo",
     "dockerComposeFile": "../docker-compose.yml",
     "service" : "rabbitmq",
-    "forwardPorts": [5672,15672,8500,8600],
+    "forwardPorts": [5672,15672],
     "workspaceFolder": "/workspaces/cloud-events-demo",
     "features": {
         "ghcr.io/devcontainers/features/java:1": {
