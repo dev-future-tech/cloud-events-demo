@@ -20,5 +20,8 @@
                 "ms-azuretools.vscode-container"
             ]
         }
+    },
+    remoteEnv: {
+        "SPRING_CLOUD_CONSUL_DISCOVERY_ENABLED" : "false"
     }
 }
