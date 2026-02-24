@@ -21,11 +21,10 @@ public class ConsoleService {
         this.streamBridge = streamBridge;
     }
 
-    public void createAddress(String steet, String city, String state, String zip, String country) {
+    public void createAddress(AddressDto addressDto) {
         ObjectMapper objectMapper = new ObjectMapper();
 
-        var address = new AddressDto(steet, city, state, zip, country);
-        String output = objectMapper.writeValueAsString(address);
+        String output = objectMapper.writeValueAsString(addressDto);
 
         CloudEvent event = CloudEventBuilder.v1()
                         .withId(UUID.randomUUID().toString())
@@ -35,6 +34,6 @@ public class ConsoleService {
                         .withData("application/json", output.getBytes(StandardCharsets.UTF_8))
                         .build();
 
-        streamBridge.send("create-address", address);
+        streamBridge.send("create-address-in", event);
     }
 }

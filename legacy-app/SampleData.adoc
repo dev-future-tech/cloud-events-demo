@@ -1,0 +1,42 @@
+= Sample Data
+
+== AddressDto
+
+[source,json]
+----
+{
+  "street" : "120 Park Ave",
+  "city" : "New York",
+  "state" : "New York",
+  "zip" : "11232",
+  "country" : "USA"
+}
+----
+
+Send via Httpie:
+
+[source,bash]
+----
+$ http --print=HhBb POST http://localhost:8080/console Content-Type:application/json street="120 Post Ave" city="New York" state="New York" country="USA" zip="12312"
+----
+
+Cloud Event
+
+[source,json]
+----
+{
+  "specversion": "1.0",
+  "id": "d3840000-149a-1ef4-ba92-08de6b625161",
+  "source": "rabbitmq://localhost/Mac_CustomerManagementApi_bus_4qnyyyywuexxe8nwbdxgsa1xbs?temporary=true",
+  "time": "2026-02-14T00:45:14.951541Z",
+  "type": "com.example.cloudeventsDemo.dto.AddressDto",
+  "datacontenttype": "application/json",
+  "data": {
+    "street" : "120 Park Ave",
+    "city" : "New York",
+    "state" : "New York",
+    "zip" : "11232",
+    "country" : "USA"
+  }
+}
+----

@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: cloud-events-demo
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+
+  cloud:
+    function:
+      definition: processAddress
+
+    consul:
+      enabled: false
+    stream:
+      bindings:
+        processAddress-in-0:
+          destination: create-address-in
+          group: create-address-group
+        processAddress-out-0:
+          destination: create-address-out
+        consumeAddress-in-0:
+          destination: create-address-out
+          group: create-address-group
+#      function:
+#        bindings:
+#          create-address-out-0:
+#            destination: create-address-out
+#            contentType: application/cloudevents+json
+#            group: create-address-group
+#            rabbit:
+#              exchangeType: queue
+#              routingKey: create-address
