@@ -7,9 +7,11 @@ spring:
         processAddress-in-0:
           destination: process-address-in
           group: process-address-group
+          content-type: application/cloudevents+json
         processAddress-out-0:
           destination: process-address-out
           group: process-address-group
+          content-type: application/cloudevents+json
   rabbitmq:
     host: localhost
     port: 5672

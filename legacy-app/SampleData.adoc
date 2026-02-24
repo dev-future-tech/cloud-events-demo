@@ -40,3 +40,24 @@ Cloud Event
   }
 }
 ----
+
+Cloud Event 2
+
+[source,json]
+----
+{
+  "specversion": "1.0",
+  "id": "d3840000-149a-1ef4-ba92-08de6b625161",
+  "source": "rabbitmq://localhost/Mac_CustomerManagementApi_bus_4qnyyyywuexxe8nwbdxgsa1xbs?temporary=true",
+  "time": "2026-02-14T00:45:14.951541Z",
+  "type": "spring.message",
+  "dataContentType": "application/json",
+  "data": {
+    "street" : "120 Park Ave",
+    "city" : "New York",
+    "state" : "New York",
+    "zip" : "11232",
+    "country" : "USA"
+  }
+}
+----
